@@ -79,5 +79,8 @@ timestamp.time("short", myDateObject);
 timestamp.ampm(myDateObject);
 ```
 
+## Support
+[![Discord](https://discordapp.com/api/guilds/451745464480432129/widget.png?style=banner4)](https://discord.gg/pXc9vyC)
+
 #### Credits
 - Based on [time-stamp by Jon Schlinkert](https://github.com/jonschlinkert/time-stamp)
