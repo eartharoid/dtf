@@ -5,7 +5,7 @@
 
 
 ## Install
-`npm i date-time-stamp` or `yarn date-time-stamp`
+`npm i date-time-stamp` or `yarn install date-time-stamp`
 
 You can test it with `npm test`
 
