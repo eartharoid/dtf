@@ -1,0 +1,26 @@
+{
+  "name": "date-time-stamp",
+  "version": "1.0.0",
+  "description": "A date / timestamp formatter",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eartharoid/date-time-stamp.git"
+  },
+  "keywords": [
+    "date",
+    "time",
+    "timestamp",
+    "format",
+    "formatter"
+  ],
+  "author": "eartharoid",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/eartharoid/date-time-stamp/issues"
+  },
+  "homepage": "https://github.com/eartharoid/date-time-stamp/#readme"
+}
