@@ -18,15 +18,17 @@ const timestamp = require("date-time-stamp");
 ```js
 var time = timestamp("HH:mm:ss DD/MM/YY") // -> 20:47:06 01/01/20
 ```
-or
+
 
 ```js
 var time = timestamp("HH:mm:ss on DD/MM/YYYY (DDD, D MMMM YYYY)") // -> 20:37:20 on 01/02/2020 (Sat, 1 February 2020)
 ```
+
+
 ```js
 var time = timestamp("h ampm on DDDD") // -> 8 PM on Saturday
 ```
-or
+
 
 ## Placeholders
 ```
