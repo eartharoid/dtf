@@ -1,7 +1,7 @@
 {
   "name": "dtstamp",
   "version": "1.0.0",
-  "description": "A date / timestamp formatter",
+  "description": "A simple date and timestamp formatter with placeholders.",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
@@ -18,7 +18,7 @@
     "formatter"
   ],
   "author": "eartharoid",
-  "license": "GPL-3.0-or-later",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/eartharoid/dtstamp/issues"
   },
