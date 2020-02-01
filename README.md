@@ -1,18 +1,18 @@
-# date-time-stamp
+# dtstamp
  A simple date and timestamp formatter with placeholders.
  
  Originally made for [leeks-lazy-logger](https://www.npmjs.com/package/leekslazylogger) [(github)](https://github.com/eartharoid/leeks-lazy-logger)
 
 
 ## Install
-`npm i date-time-stamp` or `yarn install date-time-stamp`
+`npm i dtstamp` or `yarn install dtstamp`
 
 You can test it with `npm test`
 
 ## How to use
 ### Require the package:
 ```js
-const timestamp = require("date-time-stamp");
+const timestamp = require("dtstamp");
 ```
 ### Format a string using placeholders
 ```js

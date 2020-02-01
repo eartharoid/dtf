@@ -1,5 +1,5 @@
 {
-  "name": "date-time-stamp",
+  "name": "dtstamp",
   "version": "1.0.0",
   "description": "A date / timestamp formatter",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eartharoid/date-time-stamp.git"
+    "url": "git+https://github.com/eartharoid/dtstamp.git"
   },
   "keywords": [
     "date",
@@ -20,7 +20,7 @@
   "author": "eartharoid",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/eartharoid/date-time-stamp/issues"
+    "url": "https://github.com/eartharoid/dtstamp/issues"
   },
-  "homepage": "https://github.com/eartharoid/date-time-stamp/#readme"
+  "homepage": "https://github.com/eartharoid/dtstamp/#readme"
 }

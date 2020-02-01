@@ -1,5 +1,5 @@
 /**
- * @name date-time-stamp
+ * @name dtstamp
  * @author eartharoid <contact@eartharoid.me>
  * @description A date / timestamp formatter (based on "time-stamp" by Jon Schlinkert)
  * @license GNU-GPLv3
