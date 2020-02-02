@@ -5,11 +5,12 @@
 
 
 ## Install
-`npm i dtstamp` or `yarn install dtstamp`
+`npm i dtstamp` or `yarn install dtstamp`.
 
-You can test it with `npm test`
+You can test it with `npm test` or `yarn test`.
 
 ## How to use
+**Look at `test.js` for examples**
 ### Require the package:
 ```js
 const timestamp = require("dtstamp");
@@ -21,7 +22,7 @@ var time = timestamp("HH:mm:ss DD/MM/YY") // -> 20:47:06 01/01/20
 
 
 ```js
-var time = timestamp("HH:mm:ss on DD/MM/YYYY (DDD, D MMMM YYYY)") // -> 20:37:20 on 01/02/2020 (Sat, 1 February 2020)
+var time = timestamp("HH:mm:ss on DD/MM/YYYY (DDD, n_D MMMM YYYY)") // -> 20:37:20 on 01/02/2020 (Sat, 1st February 2020)
 ```
 
 
@@ -40,9 +41,14 @@ MMM: Feb
 MM: 02
 M: 2
 
+DDDD = Saturday
+DDD = Sat
+DD = 01
+D = 1
+
 HH: 20 (24h)
 hh: 08 (12h)
-h: 8 (12h, single)
+h: 8 (12h)
 
 ampm = PM (8 PM), same as .ampm()
 AMPM = PM (8 PM), same as .AMPM()
@@ -54,11 +60,21 @@ ss = 20
 s = 20
 
 ii = 123 (ms)
+
+n_YY = 21st (year of the century)
+n_M = 2nd (month of the year)
+n_D = 2nd (day of the month)
+n_HH = 14th (hour of the day)
+n_h = 2nd (hour of the morning/afternoon)
+n_m = 40th (minute of the hour)
+n_s = 9th (second of the minute)
 ```
 
 ## Other functions
 - `.ampm()`: returns `AM` or `PM`
 - `.AMPM()`: returns `AM` or `PM`
+
+- `.nth(n)` return `(n)st`, `(n)nd`, `(n)rd` or `(n)th`, `n` being a number
 
 
 - `.time(presetLength)`: Formats time using a preset style
@@ -84,3 +100,4 @@ timestamp.ampm(myDateObject);
 
 #### Credits
 - Based on [time-stamp by Jon Schlinkert](https://github.com/jonschlinkert/time-stamp)
+- [Wessel](https://github.com/passthewessel) helped wth RegEx
