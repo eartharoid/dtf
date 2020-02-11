@@ -12,7 +12,10 @@ const regex = /\b(?=(YYYY|YY|MMMM|MMM|MM|M|DDDD|DDD|DD|D|HH|hh|h|mm|m|ss|s|ii|am
 const nStr = {
     1: "st",
     2: "nd",
-    3: "rd"
+    3: "rd",
+    11: "th",
+    12: "th",
+    13: "th"
 };
 
 // remove leading 0 for singular numbers
@@ -25,7 +28,7 @@ const h12 = (h) => { return h > 12 ? h - 12 : h; };
  * @description Returns 'st', 'nd', 'rd' or 'th' with the number (eg. nth)
  * @param {number} n - an integer 
  */
-const nth = (n) => { return n+=nStr[n.toString().slice(-1)]  || "th"; };
+const nth = (n) => { return n += nStr[n.toString()] || nStr[n.toString().slice(-1)] || "th"; };
 
 // function for each format code
 const placeholders = {

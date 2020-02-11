@@ -80,8 +80,6 @@ console.log(`dtf(new Date()): ${dtf(new Date())}`)
 console.log(" ");
 
 
-// test .nth() funtion
-console.log(`${dtf.nth(1)}  ${dtf.nth(2)}   ${dtf.nth(3)}   ${dtf.nth(4)}   ${dtf.nth(5)}`)
 // test n_ placeholders
 console.log(`n_YY = ${dtf("n_YY")} (year of the century)`)
 console.log(`n_M = ${dtf("n_M")} (month of the year)`)
@@ -90,3 +88,11 @@ console.log(`n_HH = ${dtf("n_HH")} (hour of the day)`)
 console.log(`n_h = ${dtf("n_h")} (hour of the morning/afternoon)`)
 console.log(`n_m = ${dtf("n_m")} (minute of the hour)`)
 console.log(`n_s = ${dtf("n_s")} (second of the minute)`)
+
+console.log(" ");
+
+
+// test .nth() funtion
+for(let n = 0; n <= 30; n++) {
+    process.stdout.write(`  ${dtf.nth(n)}   `)
+}
