@@ -28,7 +28,7 @@ const h12 = (h) => { return h > 12 ? h - 12 : h; };
  * @description Returns 'st', 'nd', 'rd' or 'th' with the number (eg. nth)
  * @param {number} n - an integer 
  */
-const nth = (n) => { return n += nStr[n.toString()] || nStr[n.toString().slice(-1)] || "th"; };
+const nth = (n) => { return n += nStr[n.toString().slice(-2)] || nStr[n.toString().slice(-1)] || "th"; };
 
 // function for each format code
 const placeholders = {
