@@ -1,7 +1,7 @@
 # dtstamp
  A simple date and timestamp formatter with placeholders.
  
- Originally made for [leeks-lazy-logger](https://www.npmjs.com/package/leekslazylogger) [(github)](https://github.com/eartharoid/leeks-lazy-logger)
+ Originally made for [leekslazylogger](https://www.npmjs.com/package/leekslazylogger) [(github)](https://github.com/eartharoid/leekslazylogger)
 
 
 ## Install
