@@ -19,16 +19,16 @@ const nStr = {
 };
 
 // remove leading 0 for singular numbers
-const single = (x) => { return x[0] == 0 ? x.substring(1) - 12 : x; };
+const single = (x) => x[0] == 0 ? x.substring(1) - 12 : x;
 
 // convert 24h time to 12h time 
-const h12 = (h) => { return h > 12 ? h - 12 : h; };
+const h12 = (h) => h > 12 ? h - 12 : h;
 
 /**
  * @description Returns 'st', 'nd', 'rd' or 'th' with the number (eg. nth)
  * @param {number} n - an integer 
  */
-const nth = (n) => { return n += nStr[n.toString().slice(-2)] || nStr[n.toString().slice(-1)] || "th"; };
+const nth = (n) => n += nStr[n.toString().slice(-2)] || nStr[n.toString().slice(-1)] || "th";
 
 // function for each format code
 const placeholders = {
@@ -68,7 +68,7 @@ const placeholders = {
  */
 module.exports = (f, d) => {
     if (typeof f !== 'string') { d = f; f = 'HH:mm:ss'; };
-    return f.replace(regex, function (key) { return placeholders[key](!d ? new Date() : d); });
+    return f.replace(regex, (key) => placeholders[key](!d ? new Date() : d));
 };
 
 /**
@@ -76,20 +76,20 @@ module.exports = (f, d) => {
  * @param {string} f - 'full', 'long', 'medium', or 'short'
  * @param {Date} d - specific time to use, otherwise uses current time
  */
-module.exports.date = (f, d) => { return (!d ? new Date() : d).toLocaleString("en-GB", {dateStyle: !f ? "short" : f}); };
+module.exports.date = (f, d) => (!d ? new Date() : d).toLocaleString("en-GB", {dateStyle: !f ? "short" : f});
 
 /**
  * @description Format time in a preset style
  * @param {string} f - 'full', 'long', 'medium', or 'short'
  * @param {Date} d - specific time to use, otherwise uses current time
  */
-module.exports.time = (f, d) => { return (!d ? new Date() : d).toLocaleString("en-GB", {timeStyle: !f ? "medium" : f}); };
+module.exports.time = (f, d) => (!d ? new Date() : d).toLocaleString("en-GB", {timeStyle: !f ? "medium" : f});
 
 /**
  * @description Returns 'AM' or 'PM' based on time, same as using AMPM placeholder
  * @param {Date} d - specific time to use, otherwise uses current time
  */
-module.exports.ampm = (d) => { return (!d ? new Date() : d).getHours() >= 12 ? 'PM' : 'AM' };
+module.exports.ampm = (d) => (!d ? new Date() : d).getHours() >= 12 ? 'PM' : 'AM';
 
 /**
  * @description Returns 'AM' or 'PM' based on time, same as using AMPM placeholder

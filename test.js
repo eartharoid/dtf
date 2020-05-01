@@ -63,8 +63,8 @@ console.log(`.time("short"): ${dtf.time("short")}`);
 console.log(" ");
 
 // test .ampm() function
-console.log(`.ampm(): ${dtf.ampm()} (${dtf("h")} ${dtf.ampm()})`)
-console.log(`.AMPM(): ${dtf.AMPM()} (${dtf("h")} ${dtf.AMPM()})`)
+console.log(`.ampm(): ${dtf.ampm()} (${dtf("h")} ${dtf.ampm()})`);
+console.log(`.AMPM(): ${dtf.AMPM()} (${dtf("h")} ${dtf.AMPM()})`);
 
 console.log(" ");
 
@@ -73,26 +73,29 @@ console.log(`HH:mm:ss on DD/MM/YYYY (DDD, n_D MMMM YYYY) = ${dtf("HH:mm:ss on DD
 
 console.log(" ");
 
-console.log(`dtf("h:mm ampm"): ${dtf("h:mm ampm")}`)
+console.log(`dtf("h:mm ampm"): ${dtf("h:mm ampm")}`);
 console.log(`dtf(): ${dtf()}`)
-console.log(`dtf(new Date()): ${dtf(new Date())}`)
+console.log(`dtf(new Date()): ${dtf(new Date())}`);
 
 console.log(" ");
 
 
 // test n_ placeholders
-console.log(`n_YY = ${dtf("n_YY")} (year of the century)`)
-console.log(`n_M = ${dtf("n_M")} (month of the year)`)
-console.log(`n_D = ${dtf("n_D")} (day of the month)`)
-console.log(`n_HH = ${dtf("n_HH")} (hour of the day)`)
-console.log(`n_h = ${dtf("n_h")} (hour of the morning/afternoon)`)
-console.log(`n_m = ${dtf("n_m")} (minute of the hour)`)
-console.log(`n_s = ${dtf("n_s")} (second of the minute)`)
+console.log(`n_YY = ${dtf("n_YY")} (year of the century)`);
+console.log(`n_M = ${dtf("n_M")} (month of the year)`);
+console.log(`n_D = ${dtf("n_D")} (day of the month)`);
+console.log(`n_HH = ${dtf("n_HH")} (hour of the day)`);
+console.log(`n_h = ${dtf("n_h")} (hour of the morning/afternoon)`);
+console.log(`n_m = ${dtf("n_m")} (minute of the hour)`);
+console.log(`n_s = ${dtf("n_s")} (second of the minute)`);
 
 console.log(" ");
 
 
 // test .nth() funtion
 for(let n = 0; n <= 30; n++) {
-    process.stdout.write(`  ${dtf.nth(n)}   `)
-}
+    process.stdout.write(`  ${dtf.nth(n)}   `);
+};
+process.stdout.write(`  ${dtf.nth(111)} `);
+process.stdout.write(`  ${dtf.nth(112)} `);
+process.stdout.write(`  ${dtf.nth(113)} `);

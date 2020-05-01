@@ -15,19 +15,19 @@ You can test it with `npm test` or `yarn test`.
 ```js
 const timestamp = require("dtstamp");
 ```
+
+
 ### Format a string using placeholders
 ```js
-var time = timestamp("HH:mm:ss DD/MM/YY") // -> 20:47:06 01/01/20
+let time = timestamp("HH:mm:ss DD/MM/YY") // -> 20:47:06 01/01/20
 ```
 
-
 ```js
-var time = timestamp("HH:mm:ss on DD/MM/YYYY (DDD, n_D MMMM YYYY)") // -> 20:37:20 on 01/02/2020 (Sat, 1st February 2020)
+let time = timestamp("HH:mm:ss on DD/MM/YYYY (DDD, n_D MMMM YYYY)") // -> 20:37:20 on 01/02/2020 (Sat, 1st February 2020)
 ```
 
-
 ```js
-var time = timestamp("h ampm on DDDD") // -> 8 PM on Saturday
+let time = timestamp("h ampm on DDDD") // -> 8 PM on Saturday
 ```
 
 
@@ -74,7 +74,7 @@ n_s = 9th (second of the minute)
 - `.ampm()`: returns `AM` or `PM`
 - `.AMPM()`: returns `AM` or `PM`
 
-- `.nth(n)` return `(n)st`, `(n)nd`, `(n)rd` or `(n)th`, `n` being a number
+- `.nth(n)` returns `(n)st`, `(n)nd`, `(n)rd` or `(n)th`, `(n)` being a number
 
 
 - `.time(presetLength)`: Formats time using a preset style
