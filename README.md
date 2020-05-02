@@ -225,11 +225,11 @@ dtstamp.date() // valid
 dtstamp.date('long') // valid
 dtstamp.date(new Date()) // valid
 dtstamp.date('full', new Date()) // valid
-dtstamp('full', new Date(), 'de-DE') // valid
-dtstamp('short', 'en-US') // valid
+dtstamp.date('full', new Date(), 'de-DE') // valid
+dtstamp.date('short', 'en-US') // valid
 
 
-dtstamp(new Date(), 'fr-FR') // invalid - locale wil have no affect (will be "en-GB" default)
+dtstamp.date(new Date(), 'fr-FR') // invalid - locale wil have no affect (will be "en-GB" default)
 
 ```
 
