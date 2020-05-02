@@ -1,7 +1,8 @@
 /**
- * @name dtstamp
+ * @module dtstamp
  * @author eartharoid <contact@eartharoid.me>
  * @description A date / timestamp formatter (inspired by 'time-stamp' by Jon Schlinkert)
+ * @copyright 2020 Isaac Saunders (eartharoid)
  * @license MIT
  */
 
