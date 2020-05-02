@@ -1,7 +1,7 @@
 {
   "name": "dtstamp",
-  "version": "1.0.7",
-  "description": "A simple date and timestamp formatter with placeholders.",
+  "version": "1.0.8",
+  "description": "A simple date and time formatter with placeholders.",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"

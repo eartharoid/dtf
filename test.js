@@ -75,7 +75,7 @@ console.log(" ");
 
 console.log(`dtf("h:mm ampm"): ${dtf("h:mm ampm")}`);
 console.log(`dtf(): ${dtf()}`)
-console.log(`dtf(new Date()): ${dtf(new Date())}`);
+console.log(`dtf(new Date(1)): ${dtf(new Date(1))}`);
 
 console.log(" ");
 
@@ -99,3 +99,18 @@ for(let n = 0; n <= 30; n++) {
 process.stdout.write(`  ${dtf.nth(111)} `);
 process.stdout.write(`  ${dtf.nth(112)} `);
 process.stdout.write(`  ${dtf.nth(113)} `);
+
+console.log(" \n  ");
+
+console.log(dtf(new Date(), 'fr-FR')) // custom locale and Date with default text (although fr-FR looks the same anyway)
+console.log(dtf('DDD n_D MMMM YYYY', 'en-US')) // custom locale
+console.log(dtf('DDDD n_D MMMM YYYY', new Date(1), 'fr-FR')) // custom locale and Date with text
+
+console.log(" ");
+
+console.log(dtf.date('short'))
+console.log(dtf.date(new Date(1)))
+console.log(dtf.date('long', new Date()))
+console.log(dtf.date('short', new Date(), 'en-US'))
+console.log(dtf.date('short', 'en-US'))
+console.log(dtf.date('de-DE'))

@@ -1,7 +1,7 @@
 /**
  * @name dtstamp
  * @author eartharoid <contact@eartharoid.me>
- * @description A date / timestamp formatter (based on "time-stamp" by Jon Schlinkert)
+ * @description A date / timestamp formatter (inspired by 'time-stamp' by Jon Schlinkert)
  * @license MIT
  */
 
@@ -10,12 +10,12 @@ const regex = /\b(?=(YYYY|YY|MMMM|MMM|MM|M|DDDD|DDD|DD|D|HH|hh|h|mm|m|ss|s|ii|am
 
 // for nth() function
 const nStr = {
-    1: "st",
-    2: "nd",
-    3: "rd",
-    11: "th",
-    12: "th",
-    13: "th"
+    1: 'st',
+    2: 'nd',
+    3: 'rd',
+    11: 'th',
+    12: 'th',
+    13: 'th'
 };
 
 // remove leading 0 for singular numbers
@@ -28,18 +28,18 @@ const h12 = (h) => h > 12 ? h - 12 : h;
  * @description Returns 'st', 'nd', 'rd' or 'th' with the number (eg. nth)
  * @param {number} n - an integer 
  */
-const nth = (n) => n += nStr[n.toString().slice(-2)] || nStr[n.toString().slice(-1)] || "th";
+const nth = (n) => n += nStr[n.toString().slice(-2)] || nStr[n.toString().slice(-1)] || 'th';
 
 // function for each format code
 const placeholders = {
-    YYYY: (d) => d.toLocaleString("en-GB", {year: "numeric"}),
-    YY: (d) => d.toLocaleString("en-GB", {year: "2-digit"}),
-    MMMM: (d) => d.toLocaleString("en-GB", {month: "long"}),
-    MMM: (d) => d.toLocaleString("en-GB", {month: "short"}),
-    MM: (d) => d.toLocaleString("en-GB", {month: "2-digit"}),
-    M: (d) => d.toLocaleString("en-GB", {month: "numeric"}),
-    DDDD: (d) => d.toLocaleString("en-GB", {weekday: "long"}),
-    DDD: (d) => d.toLocaleString("en-GB", {weekday: "short"}),
+    YYYY: (d, l) => d.toLocaleString(l, {year: 'numeric'}),
+    YY: (d, l) => d.toLocaleString(l, {year: '2-digit'}),
+    MMMM: (d, l) => d.toLocaleString(l, {month: 'long'}),
+    MMM: (d, l) => d.toLocaleString(l, {month: 'short'}),
+    MM: (d, l) => d.toLocaleString(l, {month: '2-digit'}),
+    M: (d, l) => d.toLocaleString(l, {month: 'numeric'}),
+    DDDD: (d, l) => d.toLocaleString(l, {weekday: 'long'}),
+    DDD: (d, l) => d.toLocaleString(l, {weekday: 'short'}),
     DD: (d) => ('0' + d.getDate()).slice(-2),
     D: (d) => single(d.getDate()),
     HH: (d) => d.getHours(),
@@ -65,40 +65,48 @@ const placeholders = {
  * @description Format a date/time string using placeholders within a string
  * @param {string} f - string to format (default is 'HH:mm:ss')
  * @param {Date} d - specific time to use, otherwise uses current time
+ * @param {string} l - locale
  */
-module.exports = (f, d) => {
-    if (typeof f !== 'string') { d = f; f = 'HH:mm:ss'; };
-    return f.replace(regex, (key) => placeholders[key](!d ? new Date() : d));
+let dtstamp = (f, d, l) => {
+    if (typeof f !== 'string') l = d, d = f, f = 'HH:mm:ss';
+    return f.replace(regex, (key) => placeholders[key](!d || typeof d !== 'object' ? new Date() : d, l || 'en-GB'));
+};
+
+
+const preset = (t, f, d, l) => {
+    if (typeof d !== 'object' || typeof f == 'object') l = d, d = f;
+    if(!['full', 'long', 'medium', 'short'].includes(f)) l = f, f = t == 'date' ? 'short' : 'medium';
+    let s = {};
+    s[t + 'Style'] = f;
+    return (!d || typeof d !== 'object' ? new Date() : d).toLocaleString(l || 'en-GB', s);
 };
 
 /**
  * @description Format date in a preset style
  * @param {string} f - 'full', 'long', 'medium', or 'short'
  * @param {Date} d - specific time to use, otherwise uses current time
+ * @param {string} l - locale
  */
-module.exports.date = (f, d) => (!d ? new Date() : d).toLocaleString("en-GB", {dateStyle: !f ? "short" : f});
+dtstamp.date = (f, d, l) => preset('date', f, d, l);
 
 /**
  * @description Format time in a preset style
  * @param {string} f - 'full', 'long', 'medium', or 'short'
  * @param {Date} d - specific time to use, otherwise uses current time
+ * @param {string} l - locale
  */
-module.exports.time = (f, d) => (!d ? new Date() : d).toLocaleString("en-GB", {timeStyle: !f ? "medium" : f});
+dtstamp.time = (f, d, l) => preset('time', f, d, l);
 
 /**
  * @description Returns 'AM' or 'PM' based on time, same as using AMPM placeholder
  * @param {Date} d - specific time to use, otherwise uses current time
  */
-module.exports.ampm = (d) => (!d ? new Date() : d).getHours() >= 12 ? 'PM' : 'AM';
+dtstamp.ampm = (d) => (!d ? new Date() : d).getHours() >= 12 ? 'PM' : 'AM';
 
-/**
- * @description Returns 'AM' or 'PM' based on time, same as using AMPM placeholder
- * @param {Date} d - specific time to use, otherwise uses current time
- */
-module.exports.AMPM = module.exports.ampm;
+dtstamp.AMPM = dtstamp.ampm;
 
-/**
- * @description Returns 'st', 'nd', 'rd' or 'th' with the number (eg. nth)
- * @param {number} n - an integer 
- */
-module.exports.nth = nth;
+dtstamp.nth = nth;
+
+if (typeof exports !== 'undefined') {
+    module.exports = dtstamp; // export module if not in a browser enviroment
+}
