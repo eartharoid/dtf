@@ -16,7 +16,7 @@ This was originally made for my [leekslazylogger](https://www.npmjs.com/package/
 
 ## Install
 ### Node
-Download with `npm i dtstamp`or `yarn install dtstamp`.
+Download with `npm i dtstamp`or `yarn add dtstamp`.
 Then require the module:
 
 ```js
@@ -25,7 +25,7 @@ const dtstamp = require('dtstamp');
 // console.log(dtstamp())
 ```
 
-Run `npm test` or `yarn test` to see example outputs.
+Run `npm test` or `node test` to see example outputs.
 
 ### Browser
 For use in the browser, you can use a CDN:
