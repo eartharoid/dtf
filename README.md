@@ -1,4 +1,8 @@
 # dtstamp
+
+![npm](https://img.shields.io/npm/v/dtstamp?style=flat-square)   [![GitHub issues](https://img.shields.io/github/issues/eartharoid/dtstamp?style=flat-square)](https://github.com/eartharoid/dtstamp/issues)    [![GitHub stars](https://img.shields.io/github/stars/eartharoid/dtstamp?style=flat-square)](https://github.com/eartharoid/dtstamp/stargazers)    [![GitHub forks](https://img.shields.io/github/forks/eartharoid/dtstamp?style=flat-square)](https://github.com/eartharoid/dtstamp/network)    [![GitHub license](https://img.shields.io/github/license/eartharoid/dtstamp?style=flat-square)](https://github.com/eartharoid/dtstamp/blob/master/LICENSE)
+
+
  A simple date and time formatter with placeholder support.
  
  
