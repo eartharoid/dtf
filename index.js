@@ -20,7 +20,7 @@ const nStr = {
 };
 
 // remove leading 0 for singular numbers
-const single = (x) => x[0] == 0 ? x.substring(1) - 12 : x;
+const single = (x) => x[0] === 0 ? x.substring(1) - 12 : x;
 
 // convert 24h time to 12h time 
 const h12 = (h) => h > 12 ? h - 12 : h;
