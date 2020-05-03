@@ -11,8 +11,8 @@
 
 - [Features](#features)
 - [Install](#install)
- - [Node.JS](#node)
- - [Browser](#browser)
+  - [Node.JS](#node)
+  - [Browser](#browser)
 - [How to use](#how-to-use)
   - [Functions](#functions)
     - [Paramaters](#paramaters)
