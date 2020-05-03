@@ -1,6 +1,6 @@
 {
-  "name": "dtstamp",
-  "version": "1.0.81",
+  "name": "@eartharoid/dtf",
+  "version": "1.0.6",
   "description": "A simple date and time formatter with placeholders.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eartharoid/dtstamp.git"
+    "url": "git+https://github.com/eartharoid/dtf.git"
   },
   "keywords": [
     "date",
@@ -20,9 +20,9 @@
   "author": "eartharoid",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/eartharoid/dtstamp/issues"
+    "url": "https://github.com/eartharoid/dtf/issues"
   },
-  "homepage": "https://github.com/eartharoid/dtstamp/#readme",
+  "homepage": "https://github.com/eartharoid/dtf/#dtf",
   "devDependencies": {
     "eslint": "^6.8.0"
   }

@@ -1,7 +1,7 @@
 /**
- * @module dtstamp
+ * @module dtf
  * @author eartharoid <contact@eartharoid.me>
- * @description A date / timestamp formatter (inspired by 'time-stamp' by Jon Schlinkert)
+ * @description A date / time formatter (inspired by 'time-stamp' by Jon Schlinkert)
  * @copyright 2020 Isaac Saunders (eartharoid)
  * @license MIT
  */
@@ -68,7 +68,7 @@ const placeholders = {
  * @param {Date} d - specific time to use, otherwise uses current time
  * @param {string} l - locale
  */
-let dtstamp = (f, d, l) => {
+let dtf = (f, d, l) => {
 	if (typeof f !== 'string') l = d, d = f, f = 'HH:mm:ss';
 	return f.replace(regex, (key) => placeholders[key](!d || typeof d !== 'object' ? new Date() : d, l || 'en-GB'));
 };
@@ -88,7 +88,7 @@ const preset = (t, f, d, l) => {
  * @param {Date} d - specific time to use, otherwise uses current time
  * @param {string} l - locale
  */
-dtstamp.date = (f, d, l) => preset('date', f, d, l);
+dtf.date = (f, d, l) => preset('date', f, d, l);
 
 /**
  * @description Format time in a preset style
@@ -96,18 +96,18 @@ dtstamp.date = (f, d, l) => preset('date', f, d, l);
  * @param {Date} d - specific time to use, otherwise uses current time
  * @param {string} l - locale
  */
-dtstamp.time = (f, d, l) => preset('time', f, d, l);
+dtf.time = (f, d, l) => preset('time', f, d, l);
 
 /**
  * @description Returns 'AM' or 'PM' based on time, same as using AMPM placeholder
  * @param {Date} d - specific time to use, otherwise uses current time
  */
-dtstamp.ampm = (d) => (!d ? new Date() : d).getHours() >= 12 ? 'PM' : 'AM';
+dtf.ampm = (d) => (!d ? new Date() : d).getHours() >= 12 ? 'PM' : 'AM';
 
-dtstamp.AMPM = dtstamp.ampm;
+dtf.AMPM = dtf.ampm;
 
-dtstamp.nth = nth;
+dtf.nth = nth;
 
 if (typeof exports !== 'undefined') {
-	module.exports = dtstamp; // export module if not in a browser enviroment
+	module.exports = dtf; // export module if not in a browser enviroment
 }

@@ -1,11 +1,11 @@
-# dtstamp
+# dtf
 
-![npm](https://img.shields.io/npm/v/dtstamp?style=flat-square)   [![GitHub issues](https://img.shields.io/github/issues/eartharoid/dtstamp?style=flat-square)](https://github.com/eartharoid/dtstamp/issues)    [![GitHub stars](https://img.shields.io/github/stars/eartharoid/dtstamp?style=flat-square)](https://github.com/eartharoid/dtstamp/stargazers)    [![GitHub forks](https://img.shields.io/github/forks/eartharoid/dtstamp?style=flat-square)](https://github.com/eartharoid/dtstamp/network)    [![GitHub license](https://img.shields.io/github/license/eartharoid/dtstamp?style=flat-square)](https://github.com/eartharoid/dtstamp/blob/master/LICENSE)    [![Codacy Badge](https://api.codacy.com/project/badge/Grade/15dc38c312c3430d8ed02c58edb2e8bd)](https://www.codacy.com/manual/Eartharoid/dtstamp?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=eartharoid/dtstamp&amp;utm_campaign=Badge_Grade)
+![npm](https://img.shields.io/npm/v/dtf?style=flat-square)   [![GitHub issues](https://img.shields.io/github/issues/eartharoid/dtf?style=flat-square)](https://github.com/eartharoid/dtf/issues)    [![GitHub stars](https://img.shields.io/github/stars/eartharoid/dtf?style=flat-square)](https://github.com/eartharoid/dtf/stargazers)    [![GitHub forks](https://img.shields.io/github/forks/eartharoid/dtf?style=flat-square)](https://github.com/eartharoid/dtf/network)    [![GitHub license](https://img.shields.io/github/license/eartharoid/dtf?style=flat-square)](https://github.com/eartharoid/dtf/blob/master/LICENSE)    [![Codacy Badge](https://api.codacy.com/project/badge/Grade/15dc38c312c3430d8ed02c58edb2e8bd)](https://www.codacy.com/manual/Eartharoid/dtf?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=eartharoid/dtf&amp;utm_campaign=Badge_Grade)
 
 
  A simple date and time formatter with placeholder support.
  
- > If you are viewing this on NPM or Yarn, please go to [GitHub](https://github.com/eartharoid/dtstamp) for the most up-to-date documentation.
+ > If you are viewing this on NPM or Yarn, please go to [GitHub](https://github.com/eartharoid/dtf) for the most up-to-date documentation.
  
 **Contents**
 
@@ -40,13 +40,13 @@ This was originally made for my [leekslazylogger](https://www.npmjs.com/package/
 
 ## Install
 ### Node
-Download with `npm i dtstamp`or `yarn add dtstamp`.
+Download with `npm i @eartharoid/dtf`or `yarn add @eartharoid/dtf`.
 Then require the module:
 
 ```js
-const dtstamp = require('dtstamp');
+const dtf = require('@eartharoid/dtf');
 ...
-// console.log(dtstamp())
+// console.log(dtf())
 ```
 
 Run `npm test` or `node test` to see example outputs.
@@ -54,22 +54,19 @@ Run `npm test` or `node test` to see example outputs.
 ### Browser
 For use in the browser, you can use a CDN:
 
-- https://bundle.run/dtstamp
-- https://cdn.jsdelivr.net/npm/dtstamp@latest/index.min.js
-- https://unpkg.com/dtstamp/index.min.js
+- https://cdn.jsdelivr.net/npm/@eartharoid/dtf@latest/index.min.js
+- https://unpkg.com/@eartharoid/dtf/index.min.js
 
 ```html
 <script src="A CDN URL FROM ABOVE"></script>
 <script>
-  let dtf = dtstamp; // optionally rename
   ...
   // console.log(dtf())
-  // console.log(dtstamp())
 </script>
 ```
 
 ## How to use
-**If you want to see examples in use, look at [test.js](https://github.com/eartharoid/dtstamp/blob/master/test.js).**
+**If you want to see examples in use, look at [test.js](https://github.com/eartharoid/dtf/blob/master/test.js).**
 
 
 ### Functions
@@ -91,13 +88,13 @@ For use in the browser, you can use a CDN:
 - `.AMPM(d, l)`: returns `AM` or `PM`
 - `.nth(n)`: returns `n` with `st, nd, rd, th` (Example: `.nth(5)` -> `5th`)
 - `.time(p, d, l)`: Formats time using a preset style
-  - P: `full`, `long`, `medium`, or `short` (default is `medium`)
+  - p: `full`, `long`, `medium`, or `short` (default is `medium`)
 - `.date(p, d, l)`: Formats date using a preset style
   - p: `full`, `long`, `medium`, or `short` (default is `short`)
 
 
 ### Placeholders
-All of the accepted placeholders are listed below. These can be used within strings passed to the main `dtstamp()` formatting function.
+All of the accepted placeholders are listed below. These can be used within strings passed to the main `dtf()` formatting function.
 
 `PLACEHOLDER`: description, **example** *(in case you couldn't figure it out)*
 
@@ -159,21 +156,21 @@ All of the accepted placeholders are listed below. These can be used within stri
 
 
 ### Formatting a string using placeholders
-The `dtstamp()` function has 3 optional arguments: `formatString, dateObject, localeString`
+The `dtf()` function has 3 optional arguments: `formatString, dateObject, localeString`
 
 
 Examples:
 
 ```js
-let time = dtstamp("HH:mm:ss DD/MM/YY") // 20:05:20 01/02/20
+let time = dtf("HH:mm:ss DD/MM/YY") // 20:05:20 01/02/20
 ```
 
 ```js
-let time = dtstamp("HH:mm:ss on DD/MM/YYYY (DDD, n_D MMMM YYYY)") // 20:05:20 on 01/02/2020 (Sat, 1st February 2020)
+let time = dtf("HH:mm:ss on DD/MM/YYYY (DDD, n_D MMMM YYYY)") // 20:05:20 on 01/02/2020 (Sat, 1st February 2020)
 ```
 
 ```js
-let time = dtstamp("h ampm on DDDD") // 8 PM on Saturday
+let time = dtf("h ampm on DDDD") // 8 PM on Saturday
 console.log(time) // -> 8 PM on Saturday
 ```
 
@@ -181,12 +178,12 @@ console.log(time) // -> 8 PM on Saturday
 By default, all functions format the given string using the current time. If you want to format a time in the past or future, you can pass your own `Date` object with any of the functions:
 
 ```js
-dtstamp('hh:mm ampm', futureDate); // string with date
-dtstamp(new Date(1)); // only date, will use default string
+dtf('hh:mm ampm', futureDate); // string with date
+dtf(new Date(1)); // only date, will use default string
 
-dtstamp.date("full", pastDate); // full
-dtstamp.time(pastDate); // will use default preset length
-dtstamp.ampm(pastDate);
+dtf.date("full", pastDate); // full
+dtf.time(pastDate); // will use default preset length
+dtf.ampm(pastDate);
 ```
 
 > See [**Flexibility**](#flexibility) and [**Caveats**](#caveats) below for more information.
@@ -198,12 +195,12 @@ The `.nth()` function, `.ampm()`/`.AMPM()` functions, and the `ampm`/`AMPM` plac
 > *Note that numbers are not affected by the locale option, only words (names of days and months). See **Caveats** below for more information*
 
 ```js
-dtstamp('DDD n_D MMMM YYYY', 'en-US'); // custom locale with string
-dtstamp('DDDD n_D MMMM YYYY', new Date(1), 'fr-FR'); // custom locale and string and date
+dtf('DDD n_D MMMM YYYY', 'en-US'); // custom locale with string
+dtf('DDDD n_D MMMM YYYY', new Date(1), 'fr-FR'); // custom locale and string and date
 
-dtstamp.date('short', new Date(), 'en-US'); // custom locale, preset length, and date
-dtstamp.date('short', 'en-US'); // custom locale and preset length
-dtstamp.date('de-DE'); // only custom locale, default preset length
+dtf.date('short', new Date(), 'en-US'); // custom locale, preset length, and date
+dtf.date('short', 'en-US'); // custom locale and preset length
+dtf.date('de-DE'); // only custom locale, default preset length
 ```
 
 > See [**Flexibility**](#flexibility) and [**Caveats**](#caveats) below for more information.
@@ -214,46 +211,46 @@ With the exception of `.nth()`, all of the parameters for all of the functions a
 All of the following are valid:
 
 ```js
-console.log(dtstamp('DDD n_D MMMM YYYY', 'en-US'))
-console.log(dtstamp('DDDD n_D MMMM YYYY', new Date(), 'fr-FR'))
+console.log(dtf('DDD n_D MMMM YYYY', 'en-US'))
+console.log(dtf('DDDD n_D MMMM YYYY', new Date(), 'fr-FR'))
 
-console.log(dtstamp.date())
-console.log(dtstamp.date('short'))
-console.log(dtstamp.date(new Date()))
-console.log(dtstamp.date('de-DE'))
+console.log(dtf.date())
+console.log(dtf.date('short'))
+console.log(dtf.date(new Date()))
+console.log(dtf.date('de-DE'))
 
-console.log(dtstamp.date('long', new Date()))
-console.log(dtstamp.date('short', new Date(), 'en-US'))
-console.log(dtstamp.date('short', 'en-US'))
+console.log(dtf.date('long', new Date()))
+console.log(dtf.date('short', new Date(), 'en-US'))
+console.log(dtf.date('short', 'en-US'))
 ```
 
 ## Caveats
-1: To use a custom locale with the main function (`dtstamp()`) you must also pass `f` (string) or `d` (date object), or both. Examples:
+1: To use a custom locale with the main function (`dtf()`) you must also pass `f` (string) or `d` (date object), or both. Examples:
 
 ```js
-dtstamp() // valid
-dtstamp('hh:mm') // valid
-dtstamp(new Date()) // valid
-dtstamp('hh:mm', new Date()) // valid
-dtstamp('hh:mm', new Date(), 'fr-FR') // valid
-dtstamp('hh:mm', 'fr-FR') // valid
-dtstamp(new Date(), 'fr-FR') // valid
+dtf() // valid
+dtf('hh:mm') // valid
+dtf(new Date()) // valid
+dtf('hh:mm', new Date()) // valid
+dtf('hh:mm', new Date(), 'fr-FR') // valid
+dtf('hh:mm', 'fr-FR') // valid
+dtf(new Date(), 'fr-FR') // valid
 
-dtstamp('de-DE') // invalid - will just return "de-DE"
+dtf('de-DE') // invalid - will just return "de-DE"
 ```
 
 2: When using `.date()` or `.time()`, you cannot pass `d` (date object) and `l` (locale) together without also passing a custom preset length (`p`/`f`). Examples:
 
 ```js
-dtstamp.date() // valid
-dtstamp.date('long') // valid
-dtstamp.date(new Date()) // valid
-dtstamp.date('full', new Date()) // valid
-dtstamp.date('full', new Date(), 'de-DE') // valid
-dtstamp.date('short', 'en-US') // valid
+dtf.date() // valid
+dtf.date('long') // valid
+dtf.date(new Date()) // valid
+dtf.date('full', new Date()) // valid
+dtf.date('full', new Date(), 'de-DE') // valid
+dtf.date('short', 'en-US') // valid
 
 
-dtstamp.date(new Date(), 'fr-FR') // invalid - locale wil have no affect (will be "en-GB" default)
+dtf.date(new Date(), 'fr-FR') // invalid - locale wil have no affect (will be "en-GB" default)
 
 ```
 
