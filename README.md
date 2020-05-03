@@ -7,6 +7,25 @@
  
  > If you are viewing this on NPM or Yarn, please go to [GitHub](https://github.com/eartharoid/dtstamp) for the most up-to-date documentation.
  
+**Contents**
+
+- [Features](#features)
+- [Install](#install)
+ - [Node.JS](#node)
+ - [Browser](#browser)
+- [How to use](#how-to-use)
+  - [Functions](#functions)
+    - [Paramaters](#paramaters)
+  - [Placeholders](#placeholders)
+  - [Formatting a string using placeholders](#formatting-a-string-using-placeholders)
+  - [Formatting a specific date / time](#formatting-a-specific-date--time)
+  - [Formatting in your locale](#formatting-in-your-locale)
+- [Flexibility](#flexibility)
+- [Caveats](#caveats)
+- [Support](#support)
+- [Credits](#credits)
+
+
 ## Features
 - Converts strings containing placeholders to timestamps
 - Option to format a custom date (in the past or future)
