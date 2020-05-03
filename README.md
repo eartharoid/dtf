@@ -1,10 +1,11 @@
 # dtstamp
 
-![npm](https://img.shields.io/npm/v/dtstamp?style=flat-square)   [![GitHub issues](https://img.shields.io/github/issues/eartharoid/dtstamp?style=flat-square)](https://github.com/eartharoid/dtstamp/issues)    [![GitHub stars](https://img.shields.io/github/stars/eartharoid/dtstamp?style=flat-square)](https://github.com/eartharoid/dtstamp/stargazers)    [![GitHub forks](https://img.shields.io/github/forks/eartharoid/dtstamp?style=flat-square)](https://github.com/eartharoid/dtstamp/network)    [![GitHub license](https://img.shields.io/github/license/eartharoid/dtstamp?style=flat-square)](https://github.com/eartharoid/dtstamp/blob/master/LICENSE)
+![npm](https://img.shields.io/npm/v/dtstamp?style=flat-square)   [![GitHub issues](https://img.shields.io/github/issues/eartharoid/dtstamp?style=flat-square)](https://github.com/eartharoid/dtstamp/issues)    [![GitHub stars](https://img.shields.io/github/stars/eartharoid/dtstamp?style=flat-square)](https://github.com/eartharoid/dtstamp/stargazers)    [![GitHub forks](https://img.shields.io/github/forks/eartharoid/dtstamp?style=flat-square)](https://github.com/eartharoid/dtstamp/network)    [![GitHub license](https://img.shields.io/github/license/eartharoid/dtstamp?style=flat-square)](https://github.com/eartharoid/dtstamp/blob/master/LICENSE)    [![Codacy Badge](https://api.codacy.com/project/badge/Grade/15dc38c312c3430d8ed02c58edb2e8bd)](https://www.codacy.com/manual/Eartharoid/dtstamp?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=eartharoid/dtstamp&amp;utm_campaign=Badge_Grade)
 
 
  A simple date and time formatter with placeholder support.
  
+ > If you are viewing this on NPM or Yarn, please go to [GitHub](https://github.com/eartharoid/dtstamp) for the most up-to-date documentation.
  
 ## Features
 - Converts strings containing placeholders to timestamps

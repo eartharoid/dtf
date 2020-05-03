@@ -11,12 +11,12 @@ const regex = /\b(?=(YYYY|YY|MMMM|MMM|MM|M|DDDD|DDD|DD|D|HH|hh|h|mm|m|ss|s|ii|am
 
 // for nth() function
 const nStr = {
-    1: 'st',
-    2: 'nd',
-    3: 'rd',
-    11: 'th',
-    12: 'th',
-    13: 'th'
+	1: 'st',
+	2: 'nd',
+	3: 'rd',
+	11: 'th',
+	12: 'th',
+	13: 'th'
 };
 
 // remove leading 0 for singular numbers
@@ -33,33 +33,33 @@ const nth = (n) => n += nStr[n.toString().slice(-2)] || nStr[n.toString().slice(
 
 // function for each format code
 const placeholders = {
-    YYYY: (d, l) => d.toLocaleString(l, {year: 'numeric'}),
-    YY: (d, l) => d.toLocaleString(l, {year: '2-digit'}),
-    MMMM: (d, l) => d.toLocaleString(l, {month: 'long'}),
-    MMM: (d, l) => d.toLocaleString(l, {month: 'short'}),
-    MM: (d, l) => d.toLocaleString(l, {month: '2-digit'}),
-    M: (d, l) => d.toLocaleString(l, {month: 'numeric'}),
-    DDDD: (d, l) => d.toLocaleString(l, {weekday: 'long'}),
-    DDD: (d, l) => d.toLocaleString(l, {weekday: 'short'}),
-    DD: (d) => ('0' + d.getDate()).slice(-2),
-    D: (d) => single(d.getDate()),
-    HH: (d) => d.getHours(),
-    hh: (d) => ('0' + h12(d.getHours())).slice(-2),
-    h: (d) => single(h12(d.getHours())),
-    mm: (d) => ('0' + d.getMinutes()).slice(-2),
-    m: (d) => single(d.getMinutes()),
-    ss: (d) => ('0' + d.getSeconds()).slice(-2),
-    s: (d) => single(d.getSeconds()),
-    ii: (d) => d.getMilliseconds(),
-    ampm: (d) => d.getHours() >= 12 ? 'PM' : 'AM',
-    AMPM: (d) => d.getHours() >= 12 ? 'PM' : 'AM',
-    n_YY: (d) => nth(parseInt(placeholders.YY(d)) + 1),
-    n_M: (d) => nth(parseInt(placeholders.M(d))),
-    n_D: (d) => nth(parseInt(placeholders.D(d))),
-    n_HH: (d) => nth(parseInt(placeholders.HH(d))),
-    n_h: (d) => nth(parseInt(placeholders.h(d))),
-    n_m: (d) => nth(parseInt(placeholders.m(d))),
-    n_s: (d) => nth(parseInt(placeholders.s(d)))
+	YYYY: (d, l) => d.toLocaleString(l, {year: 'numeric'}),
+	YY: (d, l) => d.toLocaleString(l, {year: '2-digit'}),
+	MMMM: (d, l) => d.toLocaleString(l, {month: 'long'}),
+	MMM: (d, l) => d.toLocaleString(l, {month: 'short'}),
+	MM: (d, l) => d.toLocaleString(l, {month: '2-digit'}),
+	M: (d, l) => d.toLocaleString(l, {month: 'numeric'}),
+	DDDD: (d, l) => d.toLocaleString(l, {weekday: 'long'}),
+	DDD: (d, l) => d.toLocaleString(l, {weekday: 'short'}),
+	DD: (d) => ('0' + d.getDate()).slice(-2),
+	D: (d) => single(d.getDate()),
+	HH: (d) => d.getHours(),
+	hh: (d) => ('0' + h12(d.getHours())).slice(-2),
+	h: (d) => single(h12(d.getHours())),
+	mm: (d) => ('0' + d.getMinutes()).slice(-2),
+	m: (d) => single(d.getMinutes()),
+	ss: (d) => ('0' + d.getSeconds()).slice(-2),
+	s: (d) => single(d.getSeconds()),
+	ii: (d) => d.getMilliseconds(),
+	ampm: (d) => d.getHours() >= 12 ? 'PM' : 'AM',
+	AMPM: (d) => d.getHours() >= 12 ? 'PM' : 'AM',
+	n_YY: (d) => nth(parseInt(placeholders.YY(d)) + 1),
+	n_M: (d) => nth(parseInt(placeholders.M(d))),
+	n_D: (d) => nth(parseInt(placeholders.D(d))),
+	n_HH: (d) => nth(parseInt(placeholders.HH(d))),
+	n_h: (d) => nth(parseInt(placeholders.h(d))),
+	n_m: (d) => nth(parseInt(placeholders.m(d))),
+	n_s: (d) => nth(parseInt(placeholders.s(d)))
 };
 
 /**
@@ -69,17 +69,17 @@ const placeholders = {
  * @param {string} l - locale
  */
 let dtstamp = (f, d, l) => {
-    if (typeof f !== 'string') l = d, d = f, f = 'HH:mm:ss';
-    return f.replace(regex, (key) => placeholders[key](!d || typeof d !== 'object' ? new Date() : d, l || 'en-GB'));
+	if (typeof f !== 'string') l = d, d = f, f = 'HH:mm:ss';
+	return f.replace(regex, (key) => placeholders[key](!d || typeof d !== 'object' ? new Date() : d, l || 'en-GB'));
 };
 
 
 const preset = (t, f, d, l) => {
-    if (typeof d !== 'object' || typeof f == 'object') l = d, d = f;
-    if(!['full', 'long', 'medium', 'short'].includes(f)) l = f, f = t == 'date' ? 'short' : 'medium';
-    let s = {};
-    s[t + 'Style'] = f;
-    return (!d || typeof d !== 'object' ? new Date() : d).toLocaleString(l || 'en-GB', s);
+	if (typeof d !== 'object' || typeof f == 'object') l = d, d = f;
+	if(!['full', 'long', 'medium', 'short'].includes(f)) l = f, f = t == 'date' ? 'short' : 'medium';
+	let s = {};
+	s[t + 'Style'] = f;
+	return (!d || typeof d !== 'object' ? new Date() : d).toLocaleString(l || 'en-GB', s);
 };
 
 /**
@@ -109,5 +109,5 @@ dtstamp.AMPM = dtstamp.ampm;
 dtstamp.nth = nth;
 
 if (typeof exports !== 'undefined') {
-    module.exports = dtstamp; // export module if not in a browser enviroment
+	module.exports = dtstamp; // export module if not in a browser enviroment
 }

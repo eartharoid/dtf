@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/eartharoid/dtstamp/issues"
   },
-  "homepage": "https://github.com/eartharoid/dtstamp/#readme"
+  "homepage": "https://github.com/eartharoid/dtstamp/#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
 }
