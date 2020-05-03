@@ -23,7 +23,7 @@ module.exports = {
 			'windows'
 		],
 		'quotes': [
-			'error',
+			'warn',
 			'single'
 		],
 		'semi': [
