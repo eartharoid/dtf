@@ -1,28 +1,34 @@
 ---
 name: Bug report
 about: Tell me about a problem
-title: "[BUG] "
+title: "Bug report"
 labels: bug, help wanted
 assignees: eartharoid
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+#### Describe the bug
+> A clear and concise description of what the bug is.
 
-**To Reproduce**
+
+#### To Reproduce
 Steps to reproduce the behaviour:
-1. Do "..." 
-2. See error
 
-**Expected behaviour**
-A clear and concise description of what you expected to happen.
+1. ...
+2. ...
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
 
-**Version""
+#### Expected behaviour
+> A clear and concise description of what you expected to happen.
+
+
+#### Version(s)
  - 1.x
 
-**Additional context**
-Add any other context about the problem here.
+
+#### Screenshots?
+> If applicable, add screenshots to help explain your problem.
+
+
+#### Additional context?
+Add any other information about the problem here.
