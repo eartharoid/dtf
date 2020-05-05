@@ -46,7 +46,7 @@ console.log(`s = ${dtf('s')}`);
 console.log(' ');
 
 // test milliseconds placeholders
-console.log(`ii = ${dtf('ii')} (ms)`);
+console.log(`SSS = ${dtf('SSS')} (ms)`);
 
 console.log(' ');
 

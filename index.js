@@ -7,7 +7,7 @@
  */
 
 // regex for format placeholders
-const regex = /\b(?=(YYYY|YY|MMMM|MMM|MM|M|DDDD|DDD|DD|D|HH|hh|h|mm|m|ss|s|ii|ampm|AMPM|n_YY|n_M|n_D|n_h|n_HH|n_m|n_s|n_ii]))\1\b/g;
+const regex = /\b(?=(YYYY|YY|MMMM|MMM|MM|M|DDDD|DDD|DD|D|HH|hh|h|mm|m|ss|s|SSS|ii|ampm|AMPM|n_YY|n_M|n_D|n_h|n_HH|n_m|n_s]))\1\b/g;
 
 // for nth() function
 const nStr = {
@@ -50,7 +50,8 @@ const placeholders = {
 	m: (d) => single(d.getMinutes()),
 	ss: (d) => ('0' + d.getSeconds()).slice(-2),
 	s: (d) => single(d.getSeconds()),
-	ii: (d) => d.getMilliseconds(),
+	SSS: (d) => d.getMilliseconds(),
+	ii: (d) => d.getMilliseconds(), // deprecated
 	ampm: (d) => d.getHours() >= 12 ? 'pm' : 'am',
 	AMPM: (d) => d.getHours() >= 12 ? 'PM' : 'AM',
 	n_YY: (d) => nth(parseInt(placeholders.YY(d)) + 1),

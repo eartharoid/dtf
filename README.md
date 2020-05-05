@@ -6,6 +6,8 @@
 
  > If you are viewing this on NPM or Yarn, please go to [GitHub](https://github.com/eartharoid/dtf) for the most up-to-date documentation.
 
+See [releases](https://github.com/eartharoid/dtf/releases) for changelog.
+
 **Contents:**
 
 - [dtf](#dtf)
@@ -99,28 +101,30 @@ For use in the browser, you can use a CDN:
 
 All of the accepted placeholders are listed below. These can be used within strings passed to the main `dtf()` formatting function.
 
+[ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date-time placeholders:
+
 | Placeholder | Description                   |    Example |
 |-------------|-------------------------------|-----------:|
 | `YYYY`      | full year                     |     `2020` |
 | `YY`        | short year                    |       `20` |
 | `MMMM`      | full month name               | `February` |
 | `MMM`       | short month name              |      `Feb` |
-| `MM`        | month number                  |       `02` |
+| `MM`        | month number (zero-padded)    |       `02` |
 | `M`         | single month number           |        `2` |
-| `DDDD`      | full day name                 | `Saturday` |
+| `DDDD`      | full day name (zero-padded)   | `Saturday` |
 | `DDD`       | short day name                |      `Sat` |
-| `DD`        | day number                    |       `01` |
+| `DD`        | day number (zero-padded)      |       `01` |
 | `D`         | single day number             |        `1` |
-| `HH`        | 24h hour                      |       `20` |
-| `hh`        | 12h hour                      |       `08` |
+| `HH`        | 24h hour(zero-padded)         |       `20` |
+| `hh`        | 12h hour(zero-padded)         |       `08` |
 | `h`         | single 12h hour               |        `8` |
 | `ampm`      | am/pm                         |       `pm` |
 | `AMPM`      | AM/PM                         |       `PM` |
-| `mm`        | minute                        |       `05` |
+| `mm`        | minute(zero-padded)           |       `05` |
 | `m`         | single minute                 |        `5` |
-| `ss`        | second                        |       `20` |
+| `ss`        | second(zero-padded)           |       `20` |
 | `s`         | single second                 |       `20` |
-| `ii`        | milliseconds                  |      `123` |
+| `SSS`       | milliseconds                  |      `123` |
 | `n_YY`      | year of the century           |     `21st` |
 | `n_M`       | month of the year             |      `2nd` |
 | `n_D`       | day of the month              |      `1st` |
