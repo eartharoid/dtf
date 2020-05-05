@@ -1,4 +1,4 @@
-# dtf
+# dtf <!-- omit in toc -->
 
 [![npm](https://img.shields.io/npm/v/@eartharoid/dtf/latest?style=flat-square)](https://www.npmjs.com/package/@eartharoid/dtf)   [![GitHub issues](https://img.shields.io/github/issues/eartharoid/dtf?style=flat-square)](https://github.com/eartharoid/dtf/issues)    [![GitHub stars](https://img.shields.io/github/stars/eartharoid/dtf?style=flat-square)](https://github.com/eartharoid/dtf/stargazers)    [![GitHub forks](https://img.shields.io/github/forks/eartharoid/dtf?style=flat-square)](https://github.com/eartharoid/dtf/network)    [![GitHub license](https://img.shields.io/github/license/eartharoid/dtf?style=flat-square)](https://github.com/eartharoid/dtf/blob/master/LICENSE)    ![Codacy grade](https://img.shields.io/codacy/grade/15dc38c312c3430d8ed02c58edb2e8bd?logo=codacy&style=flat-square)    [![Discord support server](https://discordapp.com/api/guilds/451745464480432129/embed.png?style=shield)](https://discord.gg/pXc9vyC)
 
@@ -10,22 +10,21 @@ See [releases](https://github.com/eartharoid/dtf/releases) for changelog.
 
 **Contents:**
 
-- [dtf](#dtf)
-  - [Features](#features)
-  - [Install](#install)
-    - [Node](#node)
-    - [Browser](#browser)
-  - [How to use](#how-to-use)
-    - [Functions](#functions)
-      - [Paramaters](#paramaters)
-    - [Placeholders](#placeholders)
-    - [Formatting a string using placeholders](#formatting-a-string-using-placeholders)
-    - [Formatting a specific date / time](#formatting-a-specific-date--time)
-    - [Formatting in your locale](#formatting-in-your-locale)
-  - [Flexibility](#flexibility)
-  - [Caveats](#caveats)
-  - [Support](#support)
-  - [Credits](#credits)
+- [Features](#features)
+- [Install](#install)
+  - [Node](#node)
+  - [Browser](#browser)
+- [How to use](#how-to-use)
+  - [Functions](#functions)
+    - [Paramaters](#paramaters)
+  - [Placeholders](#placeholders)
+  - [Formatting a string using placeholders](#formatting-a-string-using-placeholders)
+  - [Formatting a specific date / time](#formatting-a-specific-date--time)
+  - [Formatting in your locale](#formatting-in-your-locale)
+- [Flexibility](#flexibility)
+- [Caveats](#caveats)
+- [Support](#support)
+- [Credits](#credits)
 
 ## Features
 
