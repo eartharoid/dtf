@@ -22,8 +22,5 @@
   "bugs": {
     "url": "https://github.com/eartharoid/dtf/issues"
   },
-  "homepage": "https://github.com/eartharoid/dtf/#dtf",
-  "devDependencies": {
-    "eslint": "^6.8.0"
-  }
+  "homepage": "https://github.com/eartharoid/dtf/#dtf"
 }

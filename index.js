@@ -1,5 +1,5 @@
 /**
- * @module dtf
+ * @module @eartharoid/dtf
  * @author eartharoid <contact@eartharoid.me>
  * @description A date / time formatter (inspired by 'time-stamp' by Jon Schlinkert)
  * @copyright 2020 Isaac Saunders (eartharoid)
@@ -28,6 +28,7 @@ const h12 = (h) => h > 12 ? h - 12 : h;
 /**
  * @description Returns 'st', 'nd', 'rd' or 'th' with the number (eg. nth)
  * @param {number} n - an integer 
+ * @returns {string}
  */
 const nth = (n) => n += nStr[n.toString().slice(-2)] || nStr[n.toString().slice(-1)] || 'th';
 
@@ -68,6 +69,7 @@ const placeholders = {
  * @param {string} f - string to format (default is 'HH:mm:ss')
  * @param {Date} d - specific time to use, otherwise uses current time
  * @param {string} l - locale
+ * @returns {string}
  */
 let dtf = (f, d, l) => {
 	if (typeof f !== 'string') l = d, d = f, f = 'HH:mm:ss';
@@ -88,6 +90,7 @@ const preset = (t, f, d, l) => {
  * @param {string} f - 'full', 'long', 'medium', or 'short'
  * @param {Date} d - specific time to use, otherwise uses current time
  * @param {string} l - locale
+ * @returns {string}
  */
 dtf.date = (f, d, l) => preset('date', f, d, l);
 
@@ -96,15 +99,22 @@ dtf.date = (f, d, l) => preset('date', f, d, l);
  * @param {string} f - 'full', 'long', 'medium', or 'short'
  * @param {Date} d - specific time to use, otherwise uses current time
  * @param {string} l - locale
+ * @returns {string}
  */
 dtf.time = (f, d, l) => preset('time', f, d, l);
 
 /**
- * @description Returns 'AM' or 'PM' based on time, same as using AMPM placeholder
+ * @description Returns 'am' or 'pm' based on time, same as using ampm placeholder
  * @param {Date} d - specific time to use, otherwise uses current time
+ * @returns {string}
  */
 dtf.ampm = (d) => (!d ? new Date() : d).getHours() >= 12 ? 'pm' : 'am';
 
+/**
+ * @description Returns 'AM' or 'PM' based on time, same as using AMPM placeholder
+ * @param {Date} d - specific time to use, otherwise uses current time
+ * @returns {string}
+ */
 dtf.AMPM = (d) => (!d ? new Date() : d).getHours() >= 12 ? 'PM' : 'AM';
 
 dtf.nth = nth;
