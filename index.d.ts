@@ -9,7 +9,8 @@ declare module '@eartharoid/dtf' {
 	 * @param l - locale
 	 * @returns {string}
 	 */
-	export default (f?: string, d?: Date, l?: string) => string;
+	function dtf(f?: string, d?: Date, l?: string): string;
+	export = dtf;
 
 	/**
 	 * Format date in a preset style
