@@ -3,6 +3,7 @@
   "version": "1.0.6",
   "description": "A simple date and time formatter with placeholders.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "node test.js"
   },
