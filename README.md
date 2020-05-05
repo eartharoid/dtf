@@ -114,14 +114,14 @@ All of the accepted placeholders are listed below. These can be used within stri
 | `DDD`       | short day name                |      `Sat` |
 | `DD`        | day number (zero-padded)      |       `01` |
 | `D`         | single day number             |        `1` |
-| `HH`        | 24h hour(zero-padded)         |       `20` |
-| `hh`        | 12h hour(zero-padded)         |       `08` |
+| `HH`        | 24h hour (zero-padded)        |       `20` |
+| `hh`        | 12h hour (zero-padded)        |       `08` |
 | `h`         | single 12h hour               |        `8` |
 | `ampm`      | am/pm                         |       `pm` |
 | `AMPM`      | AM/PM                         |       `PM` |
-| `mm`        | minute(zero-padded)           |       `05` |
+| `mm`        | minute (zero-padded)          |       `05` |
 | `m`         | single minute                 |        `5` |
-| `ss`        | second(zero-padded)           |       `20` |
+| `ss`        | second (zero-padded)          |       `20` |
 | `s`         | single second                 |       `20` |
 | `SSS`       | milliseconds                  |      `123` |
 | `n_YY`      | year of the century           |     `21st` |
