@@ -51,7 +51,7 @@ const placeholders = {
 	ss: (d) => ('0' + d.getSeconds()).slice(-2),
 	s: (d) => single(d.getSeconds()),
 	ii: (d) => d.getMilliseconds(),
-	ampm: (d) => d.getHours() >= 12 ? 'PM' : 'AM',
+	ampm: (d) => d.getHours() >= 12 ? 'pm' : 'am',
 	AMPM: (d) => d.getHours() >= 12 ? 'PM' : 'AM',
 	n_YY: (d) => nth(parseInt(placeholders.YY(d)) + 1),
 	n_M: (d) => nth(parseInt(placeholders.M(d))),
@@ -102,9 +102,9 @@ dtf.time = (f, d, l) => preset('time', f, d, l);
  * @description Returns 'AM' or 'PM' based on time, same as using AMPM placeholder
  * @param {Date} d - specific time to use, otherwise uses current time
  */
-dtf.ampm = (d) => (!d ? new Date() : d).getHours() >= 12 ? 'PM' : 'AM';
+dtf.ampm = (d) => (!d ? new Date() : d).getHours() >= 12 ? 'pm' : 'am';
 
-dtf.AMPM = dtf.ampm;
+dtf.AMPM = (d) => (!d ? new Date() : d).getHours() >= 12 ? 'PM' : 'AM';
 
 dtf.nth = nth;
 
