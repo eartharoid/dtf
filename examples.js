@@ -1,4 +1,4 @@
-const dtf = require('../lib/');
+const dtf = require('./lib/');
 
 console.log(' ');
 
