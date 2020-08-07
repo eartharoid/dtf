@@ -1,5 +1,5 @@
 const test = require('ava');
-const dtf = require('./');
+const dtf = require('../lib/');
 
 const h12 = (h) => h > 12 ? h - 12 : h;
 const single = (x) => x[0] === 0 ? x.substring(1) - 12 : x;
@@ -19,6 +19,12 @@ test('dtf("h:mm ampm")', t => {
 	t.is(dtf('h:mm ampm'), exp); // pass or fail
 });
 
+test('dtf("HH:mm:ss)', t => {
+	let d = new Date(0);
+	let exp = '01:00:00';
+	t.is(dtf('HH:mm:ss', d), exp); // pass or fail
+});
+
 test('dtf("DDDD", "fr-FR")', t => {
 	let d = new Date;
 	let exp = d.toLocaleString('fr-FR', {weekday: 'long'});
@@ -31,6 +37,6 @@ test('dtf("DD/MM/YY", new Date(1))', t => {
 });
 
 test('dtf(new Date(1))', t => {
-	let exp = '1:00:00';
+	let exp = '01:00:00';
 	t.is(dtf(new Date(1)), exp); // pass or fail
 });

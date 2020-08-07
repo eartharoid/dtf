@@ -1,12 +1,13 @@
 {
   "name": "@eartharoid/dtf",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A simple date and time formatter with placeholders.",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "ava",
-    "watch:test": "ava --watch"
+    "watch:test": "ava --watch",
+    "examples": "node examples.js"
   },
   "repository": {
     "type": "git",

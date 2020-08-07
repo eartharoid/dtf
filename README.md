@@ -12,15 +12,15 @@ See [releases](https://github.com/eartharoid/dtf/releases) for changelog.
 
 - [Features](#features)
 - [Install](#install)
-  - [Node](#node)
-  - [Browser](#browser)
+	- [Node](#node)
+	- [Browser](#browser)
 - [How to use](#how-to-use)
-  - [Functions](#functions)
-    - [Paramaters](#paramaters)
-  - [Placeholders](#placeholders)
-  - [Formatting a string using placeholders](#formatting-a-string-using-placeholders)
-  - [Formatting a specific date / time](#formatting-a-specific-date--time)
-  - [Formatting in your locale](#formatting-in-your-locale)
+	- [Functions](#functions)
+		- [Paramaters](#paramaters)
+	- [Placeholders](#placeholders)
+	- [Formatting a string using placeholders](#formatting-a-string-using-placeholders)
+	- [Formatting a specific date / time](#formatting-a-specific-date--time)
+	- [Formatting in your locale](#formatting-in-your-locale)
 - [Flexibility](#flexibility)
 - [Caveats](#caveats)
 - [Support](#support)
@@ -41,7 +41,7 @@ This was originally made for my [leekslazylogger](https://www.npmjs.com/package/
 
 ### Node
 
-Download with `npm i @eartharoid/dtf`or `yarn add @eartharoid/dtf`.
+Download with `npm i @eartharoid/dtf` or `yarn add @eartharoid/dtf`.
 Then require the module:
 
 ```js
@@ -50,14 +50,14 @@ const dtf = require('@eartharoid/dtf');
 // console.log(dtf())
 ```
 
-Run `npm test` or `node test` to see example outputs.
+Run `npm examples` to see example outputs.
 
 ### Browser
 
 For use in the browser, you can use a CDN:
 
-- <https://cdn.jsdelivr.net/npm/@eartharoid/dtf@latest/index.min.js> (recommended)
-- <https://unpkg.com/@eartharoid/dtf/index.min.js>
+- <https://cdn.jsdelivr.net/npm/@eartharoid/dtf@latest/lib/index.min.js> (recommended)
+- <https://unpkg.com/@eartharoid/dtf/lib/index.min.js>
 
 ```html
 <script src="A CDN URL FROM ABOVE"></script>
@@ -69,7 +69,7 @@ For use in the browser, you can use a CDN:
 
 ## How to use
 
-**If you want to see examples in use, look at [test.js](https://github.com/eartharoid/dtf/blob/master/test.js).**
+**If you want to see examples in use, look at [examples.js](https://github.com/eartharoid/dtf/blob/master/examples.js).**
 
 ### Functions
 
@@ -239,7 +239,7 @@ dtf.date(new Date(), 'fr-FR') // invalid - locale wil have no affect (will be "e
 
 ## Support
 
-If you need help using this module (everything you need should be either here or in `test.js`), you can ask for help on my Discord server. If you believe there is a problem with my code, or you want to request a new feature, feel free to create a new issue (but for basic help I will respond faster on Discord).
+If you need help using this module (everything you need should be either here or in `examples.js`), you can ask for help on my Discord server. If you believe there is a problem with my code, or you want to request a new feature, feel free to create a new issue (but for basic help I will respond faster on Discord).
 
 [![Discord](https://discordapp.com/api/guilds/451745464480432129/widget.png?style=banner4)](https://discord.gg/pXc9vyC)
 
