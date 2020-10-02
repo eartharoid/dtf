@@ -1,6 +1,3 @@
-/**
- * A date / time formatter (inspired by 'time-stamp' by Jon Schlinkert)
- */
 declare module '@eartharoid/dtf' {
 	/**
 	 * Format a date/time string using placeholders within a string
@@ -9,8 +6,8 @@ declare module '@eartharoid/dtf' {
 	 * @param l - locale
 	 * @returns {string}
 	 */
-	function dtf(f?: string, d?: Date, l?: string): string;
-	export = dtf;
+	
+	export default function dtf(f?: string, d?: Date, l?: string): string;
 
 	/**
 	 * Format date in a preset style
