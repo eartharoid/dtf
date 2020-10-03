@@ -1,6 +1,6 @@
 {
   "name": "@eartharoid/dtf",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A simple date and time formatter with placeholders.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
