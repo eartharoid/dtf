@@ -1,34 +1,43 @@
 {
-  "name": "@eartharoid/dtf",
-  "version": "1.0.8",
-  "description": "A simple date and time formatter with placeholders.",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "scripts": {
-    "test": "ava",
-    "watch:test": "ava --watch",
-    "examples": "node examples.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eartharoid/dtf.git"
-  },
-  "keywords": [
-    "date",
-    "time",
-    "timestamp",
-    "format",
-    "formatter"
-  ],
-  "author": "eartharoid",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/eartharoid/dtf/issues"
-  },
-  "homepage": "https://github.com/eartharoid/dtf/#dtf",
-  "dependencies": {},
-  "devDependencies": {
-    "eslint": "^6.8.0",
-    "ava": "^3.8.1"
-  }
+	"name": "@eartharoid/dtf",
+	"version": "2.0.0",
+	"description": "A simple date and time formatter.",
+	"main": "dist/index.js",
+	"types": "types.d.ts",
+	"files": [
+		"dist/",
+		"types.d.ts"
+	],
+	"scripts": {
+		"build": "tsc",
+		"build-and-test": "npm run build && npm run test",
+		"lint": "eslint src --ext .ts",
+		"lint-and-fix": "eslint src --ext .ts --fix",
+		"test": "ava",
+		"watch:test": "ava --watch"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/eartharoid/dtf.git"
+	},
+	"keywords": [
+		"date",
+		"time",
+		"timestamp",
+		"formatter",
+		"placeholders"
+	],
+	"author": "eartharoid",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/eartharoid/dtf/issues"
+	},
+	"homepage": "https://github.com/eartharoid/dtf#readme",
+	"devDependencies": {
+		"@types/node": "^14.17.4",
+		"@typescript-eslint/eslint-plugin": "^4.22.0",
+		"@typescript-eslint/parser": "^4.22.0",
+		"ava": "^3.15.0",
+		"eslint": "^7.25.0"
+	}
 }
