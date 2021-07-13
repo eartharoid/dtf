@@ -19,8 +19,13 @@ Install with npm/pnpm/yarn:
 const DTF = require('@eartharoid/dtf');
 const dtf = new DTF();
 
+// a new `Date` will be created
 const timestamp = dtf.fill('DD/MM/YYYY HH:mm:ss');
 console.log(timestamp); // => `13/07/2021 14:44:51`
+
+// custom `Date` and use UTC time
+const timestamp = dtf.fill('DD/MM/YYYY HH:mm:ss', new Date(), true);
+console.log(timestamp); // => `13/07/2021 13:44:51`
 
 ```
 
