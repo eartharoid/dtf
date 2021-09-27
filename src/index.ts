@@ -10,7 +10,7 @@
 'use strict';
 
 interface PlaceholderMap {
-	[placeholder: string]: (date: Date, locale: string | undefined) => string
+	[placeholder: string]: (date: Date, locale?: string) => string
 }
 
 class DTF {

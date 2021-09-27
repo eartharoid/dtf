@@ -1,7 +1,7 @@
 declare module '@eartharoid/dtf' {
 
 	interface PlaceholderMap {
-		[placeholder: string]: (date: Date, locale: string | undefined) => string
+		[placeholder: string]: (date: Date, locale?: string) => string
 	}
 
 	class DTF {
@@ -13,7 +13,7 @@ declare module '@eartharoid/dtf' {
 		 * Create a new DTF instance
 		 * @param {string} locale - The locale to use for this DTF instance
 		 */
-		constructor(locale: string | undefined)
+		constructor(locale?: string)
 
 		/**
 		 * Fill a timestamp
@@ -23,9 +23,9 @@ declare module '@eartharoid/dtf' {
 		 * @returns {string}
 		 */
 		public fill(
-			format: string | undefined,
-			date: Date | undefined,
-			utc: boolean | undefined
+			format?: string,
+			date?: Date,
+			utc?: boolean
 		): string
 
 		/**
@@ -35,8 +35,8 @@ declare module '@eartharoid/dtf' {
 		 * @returns {string} "AM" or "PM"
 		 */
 		public AMPM(
-			date: Date | undefined,
-			utc: boolean | undefined
+			date?: Date,
+			utc?: boolean
 		): string
 
 		/**
